@@ -1,0 +1,232 @@
+/* @import '~antd/dist/antd.dark.css'; */
+/* @import '~antd/dist/antd.css'; */
+@import "~antd/dist/antd.compact.css";
+
+:root {
+  --test: rgb(248, 57, 184);
+
+  --navbarHeight: 50px;
+  --sidebarOpenWidth: 200px;
+  --sidebarClosedWidth: 44px;
+  --sidebarFooterHeight: 25px;
+
+  --navbarBackground: #18232d;
+  --navbarColor: #fff;
+
+  --sidebarBackground: #18232d;
+  --sidebarColor: #fff;
+
+  --contentBackground: #fff;
+
+  --resizeHandleColor: #18232d;
+
+  --eventTableTextColor: #fff;
+  /* --eventTableTextColor: black; */
+
+  --eventStatusOpenGradient: linear-gradient(
+    0deg,
+    rgb(253, 26, 26) 0%,
+    rgb(203, 15, 15) 50%,
+    rgb(255, 99, 99) 100%
+  );
+  /* --eventStatusOpenGradient: rgba(255, 18, 18, 0.875); */
+  --eventStatusACKGradient: linear-gradient(
+    0deg,
+    rgb(12, 173, 39) 0%,
+    rgb(0, 120, 30) 100%,
+    rgb(0, 100, 20) 100%
+  );
+  /* --eventStatusACKGradient: rgba(47, 251, 24, 0.67); */
+  --eventStatusSelectedGradient: linear-gradient(
+    0deg,
+    rgb(0, 132, 134) 0%,
+    rgb(27, 65, 216) 50%,
+    rgb(0, 140, 200) 100%
+  );
+  /* --eventStatusSelectedGradient: rgba(0, 128, 192, 0.76); */
+
+  --inputLabelColor: #18232d;
+
+  --offlinePanelStatusRowBg: #ffcccc;
+  --onlinePanelStatusRowBg: #ccffcc;
+
+  --infoBgColor: #e6f7ff;
+  --infoBorderColor: #91d5ff;
+  --infoTextColor: #1890ff;
+
+  /* --successBgColor: #f6ffed; */
+  --successBgColor: #c4eea3;
+  --successBorderColor: #b7eb8f;
+  --successTextColor: #52c41a;
+
+  --warningBgColor: #fffbe6;
+  --warningBorderColor: #ffe58f;
+  --warningTextColor: #faad14;
+
+  --errorBgColor: #fff1f0;
+  --errorBorderColor: #ffa39e;
+  --errorTextColor: #f5222d;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+::-webkit-scrollbar-track {
+  background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background-color: #7a7a7a;
+  border-radius: 20px;
+  border: 4px solid transparent;
+  background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+  background-color: #a8bbbf;
+}
+
+.ant-divider-horizontal {
+  margin-bottom: 5px !important;
+}
+
+.ant-layout-header {
+  background-color: var(--navbarBackground);
+  color: var(--navbarColor);
+  padding: 0;
+  height: var(--navbarHeight);
+  line-height: var(--navbarHeight);
+  border-bottom: 1px solid #e8e8e8;
+  font-size: 20px;
+  padding: 0px 10px;
+}
+
+/* .ant-menu-item{
+	border-bottom: 1px solid red;
+} */
+
+.ant-menu-inline {
+  background-color: var(--navbarBackground) !important;
+}
+.ant-menu-title-content {
+  font-size: 14px;
+}
+.ant-menu-item-icon {
+  font-size: 14px !important;
+}
+
+/* style={{width: '100%', background: 'transparent', border: 'none', borderBottom: '1px solid #fff', color: '#fff', fontSize: '14px'}}  */
+/* Change the placeholder to center */
+/* .navbar-search-input::placeholder { */
+/* width: 100%; */
+/* padding-left: 12px; */
+/* color: rgb(213, 191, 191); */
+/* text-align: center; */
+/* } */
+/* Remove the ouline on select */
+.navbar-search-input:focus {
+  outline: none;
+}
+
+#navbar-portal {
+  /* background-color: rgba(255, 0, 0, 0.411); */
+  /* width: 100%; */
+  padding: 0px 10px;
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 20px;
+}
+
+.navbar-component {
+  display: flex;
+  flex-direction: row;
+  /* justify-content: space-between; */
+  align-items: center;
+  height: 100%;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  /* Add bottom shadow */
+  box-shadow: 0px -15px 10px -15px #111;
+}
+
+.main-content-div {
+  width: 100%;
+  padding: 0px 3px;
+  background-color: var(--contentBackground);
+  height: calc(100vh - var(--navbarHeight));
+  overflow: auto;
+}
+
+.my-form-outer {
+  padding: 6px;
+}
+
+.my-form-header {
+  display: inline-flex;
+  width: 100%;
+  justify-content: space-between;
+  margin-bottom: 10px;
+}
+
+.my-form-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: var(--navbarBackground);
+  text-decoration: underline;
+}
+
+.my-table-filter-row {
+  display: inline-flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  width: 100%;
+  margin-bottom: 4px;
+}
+
+.my-form-input {
+  width: 100%;
+  min-width: 200px;
+}
+
+.my-dot {
+  height: 20px;
+  width: 20px;
+  background-color: var(--navbarBackground);
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.actions-outer-div {
+  display: inline-flex;
+  gap: 10px;
+  /* justify-content: space-between; */
+  /* width: 100%; */
+}
+.actions-button {
+  padding: 0px 8px;
+  /* font-size: 15px; */
+}
+
+.delete-popconfirm {
+  width: 500px;
+}
+
+.question-popover-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  font-size: 16px;
+  color: #1890ff;
+  gap: 13px;
+}

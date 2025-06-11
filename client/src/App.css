@@ -1,0 +1,157 @@
+/* @import '~antd/dist/antd.css'; */
+@import "~antd/dist/antd.compact.css";
+
+:root {
+    --navbarBackground: #ffffff;
+    --navbarColor: #000000;
+    --navbarHeight: 50px;
+    --contentBackground: #f0f2f5;
+    --primaryColor: #1890ff;
+    --secondaryColor: #52c41a;
+    --errorColor: #ff4d4f;
+    --successColor: #52c41a;
+    --warningColor: #faad14;
+    --infoColor: #1890ff;
+}
+
+body {
+    margin: 0;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen", "Ubuntu", "Cantarell", "Fira Sans",
+        "Droid Sans", "Helvetica Neue", sans-serif;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+
+::-webkit-scrollbar {
+    width: 15px;
+}
+::-webkit-scrollbar-track {
+    background-color: transparent;
+}
+::-webkit-scrollbar-thumb {
+    background-color: #7a7a7a;
+    border-radius: 20px;
+    border: 4px solid transparent;
+    background-clip: content-box;
+}
+::-webkit-scrollbar-thumb:hover {
+    background-color: #a8bbbf;
+}
+
+.ant-layout-header {
+    background-color: var(--navbarBackground);
+    color: var(--navbarColor);
+    padding: 0;
+    height: var(--navbarHeight);
+    line-height: var(--navbarHeight);
+    border-bottom: 1px solid #e8e8e8;
+    /* box-shadow: 0px -15px 10px -15px #111; */
+}
+
+.main-content-div {
+    width: 100%;
+    padding: 0px 3px;
+    background-color: var(--contentBackground);
+    height: calc(100vh - var(--navbarHeight));
+    overflow: auto;
+}
+
+.actions-button {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    padding: 0px 8px;
+    /* font-size: 15px; */
+}
+
+.question-popover-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    font-size: 16px;
+    color: #1890ff;
+    gap: 13px;
+}
+
+.actions-outer-div {
+    display: inline-flex;
+    gap: 10px;
+    /* justify-content: space-between; */
+    /* width: 100%; */
+}
+
+.my-form-title {
+    font-size: 20px;
+    font-weight: bold;
+    color: var(--navbarBackground);
+    text-decoration: underline;
+}
+
+.my-form-header {
+    display: inline-flex;
+    width: 100%;
+    justify-content: space-between;
+    margin-bottom: 10px;
+}
+
+.my-form-outer {
+    padding: 6px;
+}
+
+#navbar-portal {
+    /* background-color: rgba(255, 0, 0, 0.411); */
+    /* width: 100%; */
+    padding: 0px 10px;
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 20px;
+}
+
+.my-table-filter-row {
+    display: inline-flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    width: 100%;
+    margin-bottom: 4px;
+}
+
+.ant-table-tbody > tr > td {
+    border-bottom: 1px solid #e3e3e3;
+    transition: background 0.3s;
+}
+
+@keyframes justshake {
+    25% {
+        transform: translateX(15px);
+    }
+
+    50% {
+        transform: translateX(-15px);
+    }
+
+    75% {
+        transform: translateX(15px);
+    }
+
+    100% {
+        transform: translateX-(15px);
+    }
+}
+
+@keyframes blink-2-sec {
+    0% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}
+
+
